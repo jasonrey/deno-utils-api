@@ -5,4 +5,4 @@ const app = new Application();
 
 app.use(router.routes());
 
-await app.listen(':8000');
+await app.listen(`:${Deno.env.get('PORT') ?? 8000}`);
